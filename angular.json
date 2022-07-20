@@ -1,5 +1,8 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "cli": {
+    "analytics": "7e44bd9c-9429-402f-bd91-542199378697"
+  },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
@@ -97,6 +100,16 @@
               "src/styles.css"
             ],
             "scripts": []
+          }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "challenge-full-stack-game:build:production",
+            "firebaseProject": "challenge-full-stack-game",
+            "firebaseHostingSite": "challenge-full-stack-game"
           }
         }
       }
