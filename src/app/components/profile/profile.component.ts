@@ -9,7 +9,7 @@ import { User } from 'src/app/interfaces/user';
 })
 export class ProfileComponent implements OnInit {
 
-  constructor(private authService: AuthService) { }
+  constructor(public authService: AuthService) { }
 
   user: User = {
     email: '',

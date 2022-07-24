@@ -11,6 +11,7 @@ import { environment } from '../environments/environment';
 import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
 import { MatSliderModule } from '@angular/material/slider';
+import {MatToolbarModule} from '@angular/material/toolbar';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
@@ -23,6 +24,10 @@ import { SignInComponent } from './components/sign-in/sign-in.component';
 import { SignUpComponent } from './components/sign-up/sign-up.component';
 import { VerifyEmailComponent } from './components/verify-email/verify-email.component';
 import { AuthService } from './services/auth.service';
+import { HeaderComponent } from './components/header/header.component';
+import { CarouselComponent } from './components/carousel/carousel.component';
+import { NgImageSliderModule } from 'ng-image-slider';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -32,7 +37,9 @@ import { AuthService } from './services/auth.service';
     ProfileComponent,
     SignInComponent,
     SignUpComponent,
-    VerifyEmailComponent
+    VerifyEmailComponent,
+    HeaderComponent,
+    CarouselComponent
   ],
   imports: [
     BrowserModule,
@@ -46,6 +53,9 @@ import { AuthService } from './services/auth.service';
     MatInputModule,
     MatButtonModule,
     MatSliderModule,
+    MatToolbarModule,
+    NgImageSliderModule,
+    HttpClientModule,
   ],
   providers: [AuthService],
   bootstrap: [AppComponent]

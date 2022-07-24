@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { webSocket, WebSocketSubject } from 'rxjs/webSocket';
+import { Card } from '../interfaces/card';
 
 @Injectable({
   providedIn: 'root'
@@ -20,14 +21,13 @@ export class DataService {
     return this.http.post<any>('http://localhost:8080/iniciarJuego', gameId);
   } //https://cargames.herokuapp.com
 
-  getCars(juegoId: string){
-    let queryParams = new HttpParams();
-    queryParams = queryParams.append("juegoId",juegoId);
-    return this.http.get(`http://localhost:8080/cartas/${juegoId}`);
+  getCards(){
+    return this.http.get<Card[]>('http://localhost:8081/api/v1/carta');
+   // return this.http.get<Card[]>('/api/v1/carta'); 
   }
 
   connectToWebSocket(juegoId: string) {
-    const webSocketSubject: WebSocketSubject<string> = webSocket(`ws://localhost:8080/retrieve/${juegoId}`);
+    const webSocketSubject: WebSocketSubject<string> = webSocket(`ws://localhost:8081/retrieve/${juegoId}`);
     return webSocketSubject.asObservable();
   }
 }
