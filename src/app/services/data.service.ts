@@ -22,12 +22,12 @@ export class DataService {
   } //https://cargames.herokuapp.com
 
   getCards(){
-    return this.http.get<Card[]>('http://localhost:8081/api/v1/carta');
+    return this.http.get<Card[]>('http://localhost:8080/api/v1/carta');
    // return this.http.get<Card[]>('/api/v1/carta'); 
   }
 
   connectToWebSocket(juegoId: string) {
-    const webSocketSubject: WebSocketSubject<string> = webSocket(`ws://localhost:8081/retrieve/${juegoId}`);
+    const webSocketSubject: WebSocketSubject<string> = webSocket(`ws://localhost:8080/retrieve/${juegoId}`);
     return webSocketSubject.asObservable();
   }
 }

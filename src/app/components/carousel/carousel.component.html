@@ -1,8 +1,27 @@
-<div style="margin-top: 10%">
-    <ng-image-slider [images]="cardsCarousel" #nav></ng-image-slider>
-</div>
+<!-- TODO: -->
+<p-carousel [value]="cardsCarousel" styleClass="custom-carousel" [numVisible]="4" [numScroll]="4" [circular]="true" [autoplayInterval]="5000" [responsiveOptions]="responsiveOptions">
+    <ng-template pTemplate="header">        
+    </ng-template>
+    <ng-template let-product pTemplate="item">
+        <p-card header="{{product.title}}" subheader="" [style]="{width: '300px'}" styleClass="p-card-shadow;">
+            <p style="font-weight: bold;">Poder: {{product.poder}}</p>
+            <ng-template pTemplate="header">
+                <img alt="Card" src="{{product.thumbImage}}">
+            </ng-template>
+            
+            <div class="module line-clamp">               
+                <div class="text">{{product.descipcion}}</div>
+              </div>           
+        </p-card>
+    </ng-template>
+</p-carousel>
 
-<div style="margin-left: 10%; margin-right: 10%; margin-top: 5%;">
+<div class="wrap">
+    <button (click)="showPositionDialog('bottom')" class="button">Jugar Ahora</button>
+  </div>
+
+<p-dialog header="Jugar Ahora" [(visible)]="displayPosition" [position]="position" [modal]="true" [style]="{width: '50vw'}"
+    [draggable]="false" [resizable]="false">
     <p>
         Juego de cartas basado en los Superhéroes de Marvel y
         los acontecimientos más relevantes ocurridos durante las diferentes sagas de comics.
@@ -20,12 +39,10 @@
         El juego finaliza cuando uno de los jugadores logre quedarse con <b>todas las cartas</b>.
     </p>
 
-    <p style="text-align: center;">
-        <b>2-6 jugadores</b>.
-    </p>
+        <ng-template pTemplate="footer">
+            <p-button icon="pi pi-check" (click)="sala()" label="Continuar.." styleClass="p-button-text"></p-button>
+          
+        </ng-template>
+</p-dialog>
 
-</div>
 
-<div style="margin-left: 45%; margin-top: 5%">
-    <button mat-raised-button color="primary" (click)="goToSignIn()">Jugar Ahora</button>
-</div>

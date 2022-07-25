@@ -9,7 +9,8 @@ import { AuthService } from 'src/app/services/auth.service';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-
+  userLogged = this.authService.getUserLogged();
+  disabled: boolean = false;
   constructor(private router: Router, private authService: AuthService) { }
 
   user: User = {
@@ -21,6 +22,7 @@ export class HeaderComponent implements OnInit {
   };
 
   ngOnInit(): void {
+    this.traerdatos();
     this.authService.isAuth().subscribe(user => {
       if(user) {
         this.user = user;
@@ -41,8 +43,22 @@ export class HeaderComponent implements OnInit {
     this.router.navigate(['cards']);
   }
 
+  login(){
+    this.router.navigate(['sign-in']);
+  }
+
   SignOut(){
     this.authService.SignOut();
+  }
+
+  traerdatos() {
+    this.userLogged.subscribe((value) => {    
+      if (value?.email == undefined) {
+        this.disabled = true;        
+      } else {
+        this.disabled = false;       
+      }
+    });
   }
 
 }

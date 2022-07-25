@@ -17,6 +17,7 @@ const routes: Routes = [
   { path: 'verify-email-address', component: VerifyEmailComponent },
   { path: 'profile', component: ProfileComponent },
   { path: 'cards', component: CardsComponent },
+  {path: '**', pathMatch: 'full', redirectTo:'dashboard'}
 ];
 
 @NgModule({
