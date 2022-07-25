@@ -28,6 +28,10 @@ import { HeaderComponent } from './components/header/header.component';
 import { CarouselComponent } from './components/carousel/carousel.component';
 import { NgImageSliderModule } from 'ng-image-slider';
 import { HttpClientModule } from '@angular/common/http';
+import {MatCardModule} from '@angular/material/card';
+import {MatDividerModule} from '@angular/material/divider';
+import { CardsComponent } from './components/cards/cards.component';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 @NgModule({
   declarations: [
@@ -39,7 +43,8 @@ import { HttpClientModule } from '@angular/common/http';
     SignUpComponent,
     VerifyEmailComponent,
     HeaderComponent,
-    CarouselComponent
+    CarouselComponent,
+    CardsComponent
   ],
   imports: [
     BrowserModule,
@@ -56,6 +61,9 @@ import { HttpClientModule } from '@angular/common/http';
     MatToolbarModule,
     NgImageSliderModule,
     HttpClientModule,
+    MatCardModule,
+    MatDividerModule,
+    FlexLayoutModule,
   ],
   providers: [AuthService],
   bootstrap: [AppComponent]

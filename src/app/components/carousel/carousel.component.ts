@@ -43,4 +43,8 @@ export class CarouselComponent implements OnInit {
     
   }
 
+  goToSignIn(){
+    this.router.navigate(['sign-in']);
+  }
+
 }

@@ -37,6 +37,10 @@ export class HeaderComponent implements OnInit {
     this.router.navigate(['profile']);
   }
 
+  goToCards(){
+    this.router.navigate(['cards']);
+  }
+
   SignOut(){
     this.authService.SignOut();
   }
