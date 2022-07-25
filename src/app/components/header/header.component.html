@@ -11,7 +11,7 @@
         <img class="manImg" src="/assets/sofkau.webp" width="200" style="margin-right: 20%;">
     </span>
 </mat-toolbar>
-<mat-toolbar>
+<mat-toolbar *ngIf="user.uid">
 
     <a mat-button (click)="goToProfile()" style="margin-left: 85%;">
       Profile
