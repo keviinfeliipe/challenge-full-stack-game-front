@@ -8,7 +8,26 @@
 
 ### Información General
 ***
-Write down the general informations of your project. It is worth to always put a project status in the Readme file. This is where you can add it. 
+<p>
+    Juego de cartas basado en los Superhéroes de Marvel y
+    los acontecimientos más relevantes ocurridos durante las diferentes sagas de comics.
+</p>
+    
+<p>
+    Cada jugador cuenta con un mazo de cartas repartidas al azar, 
+    cada una de estas tiene un puntaje de poder asignado. Los jugadores tienen
+    <b>máximo 60 segundos</b> para elegir una carta y apostarla en el tablero, luego de
+    este tiempo las cartas serán reveladas y el jugador con la carta de poder
+    mayor se quedará con las cartas de los demás oponentes. 
+</p>
+
+<p>
+    El juego finaliza cuando uno de los jugadores logre quedarse con <b>todas las cartas</b>.
+</p>
+
+<p>
+    <b>2-6 jugadores</b>.
+</p>
 
 ### Screenshot
 ![Image text](https://www.united-internet.de/fileadmin/user_upload/Brands/Downloads/Logo_IONOS_by.jpg)
