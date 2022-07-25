@@ -30,11 +30,10 @@
 </p>
 
 ### Screenshot
-!(src/assets/Diagrama-Bd.jpg)
+![](src/assets/Diagrama-Bd.jpg)
 
 ## Reglas del Juego
 ***
-A list of technologies used within the project:
 * Al iniciar el juego se reparte las tarjetas a cada jugador de forma aleatoria y se tiene diferentes rondas, cada ronda los jugadores colocan una tarjeta de forma tal que los demás jugadores no sepan cuál es.
 
 * El jugador tiene un minuto para poner una tarjeta en el tablero, de lo contrario el
