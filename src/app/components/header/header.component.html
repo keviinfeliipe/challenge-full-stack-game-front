@@ -1,9 +1,25 @@
   <nav class="navbar bg-light">
     <div class="container-fluid">
-      <a href="/preguntas">
-          <img src="/assets/Marvel_Logo.svg.png" alt="" width="200" height="75">
-        </a>
+      <div>
+        <a href="/dashboard">
+            <img src="https://i.gifer.com/RBBv.gif" alt="" width="300" height="100">
+          </a>
+<!-- <p style="text-align: center">Hola</p> -->
+      </div>
         
+
+        <nav class="navbar navbar-light bg-light">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+              <img src="https://i.pinimg.com/originals/f1/c1/14/f1c11410620753da29714e3203a85ec0.gif" alt="" width="40" height="40" class="d-inline-block align-text-top">
+              Cards
+            </a>
+          </div>
+        </nav>
+       
+    
+
+        <!-- <button pButton pRipple type="button" class="p-button-outlined p-button-danger" style="text-align: center;" [disabled]="disabled" (click)="cards()"><i class="pi pi-power-off" style="margin-left: 5px;"></i>CARDS</button>   -->
         
       <form *ngIf="userLogged|async as user">
         <button class="btn p-button-secondary" style="margin-right: 10px;" disabled="true">Bienvenido {{user.email}}</button>  
@@ -14,4 +30,6 @@
 
      
     </div>
+   
   </nav>
+  <br>

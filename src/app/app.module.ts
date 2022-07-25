@@ -45,6 +45,7 @@ import {DividerModule} from 'primeng/divider';
 import {MessagesModule} from 'primeng/messages';
 import {MessageModule} from 'primeng/message';
 import {ToastModule} from 'primeng/toast';
+import { SalaComponent } from './components/sala/sala.component';
 
 
     //api
@@ -60,7 +61,8 @@ import {ToastModule} from 'primeng/toast';
     VerifyEmailComponent,
     HeaderComponent,
     CarouselComponent,
-    CardsComponent
+    CardsComponent,
+    SalaComponent
   ],
   imports: [
     BrowserModule,
