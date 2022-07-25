@@ -25,23 +25,34 @@
     El juego finaliza cuando uno de los jugadores logre quedarse con <b>todas las cartas</b>.
 </p>
 
-<p>
+<p style="text-align: center">
     <b>2-6 jugadores</b>.
 </p>
 
 ### Screenshot
-![Image text](https://www.united-internet.de/fileadmin/user_upload/Brands/Downloads/Logo_IONOS_by.jpg)
+!(src/assets/Diagrama-Bd.jpg)
 
 ## Reglas del Juego
 ***
 A list of technologies used within the project:
-* [Technologie name](https://example.com): Version 12.3 
-* [Technologie name](https://example.com): Version 2.34
-* [Library name](https://example.com): Version 1234
+* Al iniciar el juego se reparte las tarjetas a cada jugador de forma aleatoria y se tiene diferentes rondas, cada ronda los jugadores colocan una tarjeta de forma tal que los demás jugadores no sepan cuál es.
+
+* El jugador tiene un minuto para poner una tarjeta en el tablero, de lo contrario el
+sistema de forma automática selecciona una tarjeta del mazo de tarjetas del jugador.
+
+* Luego que todos los jugadores pongan su tarjeta apostada, la tarjeta que sume más
+puntos gana, significa que el jugador que tenga la mejor tarjeta se lleva las demás
+tarjetas que están en el tablero.
+
+* El jugador que adquiere las tarjetas de los demás jugadores puede usar esas
+mismas tarjetas durante el juego (es decir la puede apostar).
+
+* El juego finaliza cuando los jugadores quedan sin tarjetas y solo uno de ellos queda
+con todas las tarjetas.
 
 ## Modelo de Dominio
 ***
-A little intro about the installation. 
+A continuación se presenta el esquema de las entidades planteadas para la solución. 
 ```
 $ git clone https://example.com
 $ cd ../path/to/the/file
