@@ -2,5 +2,8 @@ export interface CardCarousel {
     id: string;
     image: string;
     thumbImage: string;
-    title: string
+    title: string;
+    caracteristica: string;
+    poder: number;
+    descipcion: string
 }

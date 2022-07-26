@@ -2,9 +2,13 @@ import { Injectable, NgZone } from '@angular/core';
 import { User } from '../interfaces/user';
 import * as auth from 'firebase/auth';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
-import { AngularFirestore, AngularFirestoreDocument,} from '@angular/fire/compat/firestore';
+import {
+  AngularFirestore,
+  AngularFirestoreDocument,
+} from '@angular/fire/compat/firestore';
 import { Router } from '@angular/router';
 import { map } from 'rxjs';
+import firebase from 'firebase/compat/app';
 @Injectable({
   providedIn: 'root',
 })
@@ -30,12 +34,13 @@ export class AuthService {
     });
   }
 
-  registerUser(email: string, password: string){
-    return new Promise((resolve, reject)=>{
-      this.afAuth.signInWithEmailAndPassword(email, password)
-      .then( userData => resolve(userData),
-      err => reject(err));
-    })
+  registerUser(email: string, password: string) {
+    return new Promise((resolve, reject) => {
+      this.afAuth.signInWithEmailAndPassword(email, password).then(
+        (userData) => resolve(userData),
+        (err) => reject(err)
+      );
+    });
   }
 
   // Sign in with email/password
@@ -140,5 +145,34 @@ export class AuthService {
 
   isAuth() {
     return this.afAuth.authState.pipe(map((auth: any) => auth));
+  }
+
+  getUserLogged() {
+    return this.afAuth.authState;
+  }
+
+  async loginGoogle(email: string, password: string) {
+    try {
+      return await this.afAuth.signInWithPopup(new firebase.auth.GoogleAuthProvider());
+    } catch (error) {
+      return null;
+    }
+  }
+
+  async loginRegistre(email: string, password: string) {
+    try {
+      return await this.afAuth
+        .createUserWithEmailAndPassword(email, password)        
+    } catch (error) {
+      return null;
+    }
+  }
+
+  async resetPassword(email: string) {
+    try {
+      return this.afAuth.sendPasswordResetEmail(email);
+    } catch (error) {
+      return null;
+    }
   }
 }

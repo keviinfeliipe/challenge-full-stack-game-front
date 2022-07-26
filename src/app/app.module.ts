@@ -7,14 +7,11 @@ import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { AngularFireStorageModule } from '@angular/fire/compat/storage';
 import { environment } from '../environments/environment';
-
 import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
 import { MatSliderModule } from '@angular/material/slider';
 import {MatToolbarModule} from '@angular/material/toolbar';
-
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
@@ -31,7 +28,27 @@ import { HttpClientModule } from '@angular/common/http';
 import {MatCardModule} from '@angular/material/card';
 import {MatDividerModule} from '@angular/material/divider';
 import { CardsComponent } from './components/cards/cards.component';
-import { FlexLayoutModule } from '@angular/flex-layout';
+import { FlexLayoutModule } from '@angular/flex-layout';   
+import {AccordionModule} from 'primeng/accordion';     //accordion and accordion tab
+import {MenuItem} from 'primeng/api';                  //api
+import {CarouselModule} from 'primeng/carousel';
+import {CardModule} from 'primeng/card';
+import {DialogModule} from 'primeng/dialog';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import {TabViewModule} from 'primeng/tabview';
+import {TableModule} from 'primeng/table';         
+import {ButtonModule} from 'primeng/button';
+import { InputTextModule } from "primeng/inputtext";
+import {ProgressSpinnerModule} from 'primeng/progressspinner';
+import {PasswordModule} from 'primeng/password';
+import {DividerModule} from 'primeng/divider';
+import {MessagesModule} from 'primeng/messages';
+import {MessageModule} from 'primeng/message';
+import {ToastModule} from 'primeng/toast';
+import { SalaComponent } from './components/sala/sala.component';
+
+
+    //api
 
 @NgModule({
   declarations: [
@@ -44,7 +61,8 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     VerifyEmailComponent,
     HeaderComponent,
     CarouselComponent,
-    CardsComponent
+    CardsComponent,
+    SalaComponent
   ],
   imports: [
     BrowserModule,
@@ -64,6 +82,24 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     MatCardModule,
     MatDividerModule,
     FlexLayoutModule,
+    AccordionModule,    
+    AccordionModule,
+    CarouselModule,
+    CardModule,
+    DialogModule,
+    FormsModule,
+    TabViewModule,
+    TableModule,
+    ButtonModule,
+    ReactiveFormsModule,
+    ProgressSpinnerModule,
+    InputTextModule,
+    PasswordModule,
+    DividerModule,
+    MessagesModule,
+    MessageModule,
+    ToastModule
+    
   ],
   providers: [AuthService],
   bootstrap: [AppComponent]
