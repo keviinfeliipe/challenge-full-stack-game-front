@@ -61,4 +61,4 @@ A continuación se presenta el esquema de las entidades planteadas para la soluc
 ![](src/assets/pantalla-2.PNG)
 
 * Cartas
-![](src/assets/pantalla-2.PNG)
+![](src/assets/pantalla-3.PNG)
