@@ -54,7 +54,11 @@ A continuación se presenta el esquema de las entidades planteadas para la soluc
 
 ## Modelo Web en Figma
 ***
-Give instructions on how to collaborate with your project.
-> Maybe you want to write a quote in this part. 
-> It should go over several rows?
-> This is how you do it.
+* LogIn 
+![](src/assets/pantalla-1.PNG)
+
+* Dashboard
+![](src/assets/pantalla-2.PNG)
+
+* Cartas
+![](src/assets/pantalla-2.PNG)
