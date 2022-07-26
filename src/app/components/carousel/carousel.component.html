@@ -1,5 +1,9 @@
 <!-- TODO: -->
-<p-carousel [value]="cardsCarousel" styleClass="custom-carousel" [numVisible]="4" [numScroll]="4" [circular]="true" [autoplayInterval]="5000" [responsiveOptions]="responsiveOptions">
+<br>
+
+
+
+<p-carousel [value]="cardsCarousel" styleClass="custom-carousel" [numVisible]="5" [numScroll]="4" [circular]="true" [autoplayInterval]="5000" [responsiveOptions]="responsiveOptions">
     <ng-template pTemplate="header">        
     </ng-template>
     <ng-template let-product pTemplate="item">
@@ -13,10 +17,12 @@
                 <div class="text">{{product.descipcion}}</div>
               </div>           
         </p-card>
+        
     </ng-template>
 </p-carousel>
 
 <div class="wrap">
+
     <button (click)="showPositionDialog('bottom')" class="button">Jugar Ahora</button>
   </div>
 
@@ -44,5 +50,4 @@
           
         </ng-template>
 </p-dialog>
-
 

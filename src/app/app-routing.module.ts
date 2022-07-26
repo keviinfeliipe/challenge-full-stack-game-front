@@ -4,6 +4,7 @@ import { CardsComponent } from './components/cards/cards.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { ForgotPasswordComponent } from './components/forgot-password/forgot-password.component';
 import { ProfileComponent } from './components/profile/profile.component';
+import { SalaComponent } from './components/sala/sala.component';
 import { SignInComponent } from './components/sign-in/sign-in.component';
 import { SignUpComponent } from './components/sign-up/sign-up.component';
 import { VerifyEmailComponent } from './components/verify-email/verify-email.component';
@@ -17,6 +18,7 @@ const routes: Routes = [
   { path: 'verify-email-address', component: VerifyEmailComponent },
   { path: 'profile', component: ProfileComponent },
   { path: 'cards', component: CardsComponent },
+  { path: 'sala', component: SalaComponent },
   {path: '**', pathMatch: 'full', redirectTo:'dashboard'}
 ];
 

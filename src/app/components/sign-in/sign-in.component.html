@@ -1,17 +1,24 @@
 <app-header></app-header>
 <p-toast></p-toast>
 <br>
+<br>
+<br>
 
-<div class="container text-center">
+<div class="container">
   <div class="row">
-    <div class="col-4">
-      <video autoplay loop src="/assets/IntroMarvel.mp4" width="720" height="480"></video>
+    <div class="col-5 zoomInDown video">
+        
+      <video autoplay loop  src="/assets/IntroMarvel.mp4#t=1,20" style=" border-radius: 120px 20px 120px 20px;" width="800" height="480"></video>
     </div>
-    <div class="col-8">
-      <div class="container">   
+
+ 
+    <div class="col-7">
         <br>
-        <br> 
-        <div class="card text-center">
+        <br>
+        <br>
+        
+      <div class="container">   
+        <div class="card text-center scale-in-ver-top">
             <div class="card-header">
                <B>LOGIN</B> <i class="pi pi-user" style="font-size: 1rem;margin-left: 10px;"></i>          
                 <p-progressSpinner *ngIf="mostrar" [style]="{width: '20', height: '20px'}" styleClass="custom-spinner" strokeWidth="8" fill="var(--surface-ground)" animationDuration=".5s"></p-progressSpinner>            
@@ -67,8 +74,15 @@
     
     </div>
     </div>    
-  </div>
+  
+ </div> 
 </div>
+
+<div class="text-center " style="background-color: #2A358C; margin-top: 140px;" >
+  <img src="https://ik.imagekit.io/lvh0tltbeph/SofkaU/made-with-by-sofkau_Iaa97UR1ek.png?ik-sdk-version=javascript-1.4.3&updatedAt=1645794724874" alt="" width="400px">
+  </div>
+
+
 
 <p-dialog header="Recuperar Contraseña" [(visible)]="displayModal" [modal]="true" [style]="{width: '20vw'}"
     [draggable]="false" [resizable]="false">
@@ -86,6 +100,12 @@
 
         </div>
     </form>
-       
+
+
    
 </p-dialog> 
+
+
+
+
+
