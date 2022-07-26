@@ -29,9 +29,6 @@
     <b>2-6 jugadores</b>.
 </p>
 
-### Screenshot
-![](src/assets/Diagrama-Bd.jpg)
-
 ## Reglas del Juego
 ***
 * Al iniciar el juego se reparte las tarjetas a cada jugador de forma aleatoria y se tiene diferentes rondas, cada ronda los jugadores colocan una tarjeta de forma tal que los demás jugadores no sepan cuál es.
@@ -52,13 +49,8 @@ con todas las tarjetas.
 ## Modelo de Dominio
 ***
 A continuación se presenta el esquema de las entidades planteadas para la solución. 
-```
-$ git clone https://example.com
-$ cd ../path/to/the/file
-$ npm install
-$ npm start
-```
-Side information: To use the application in a special environment use ```lorem ipsum``` to start
+
+![](src/assets/Diagrama-Bd.jpg)
 
 ## Modelo Web en Figma
 ***
